@@ -2,16 +2,28 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { BrowserRouter as Router, Route,  Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route,  Routes,Link } from 'react-router-dom';
 import HomePage from './Pages/HomePage';
 import NotFoundPage from './Pages/NotFoundPage';
-import LoginPage from './Pages/LoginPage';
+import AuthPage from './Pages/AuthPage';
 const App: React.FC=()=>{
+  
   return (
     <Router>
+      <nav className="navbar">
+        <ul className='navbar-links'>
+          <li>
+            <Link to="/" >Home page</Link>
+
+          </li>
+          <li>
+            <Link to="/auth">Login page</Link>
+          </li>
+        </ul>
+      </nav>
       <Routes>
-        <Route path="/" element={<HomePage/>}/>
-        <Route path="/auth" element={<LoginPage/>}/>
+        <Route index path="/" element={<HomePage/>}/>
+        <Route path="/auth" element={<AuthPage/>}/>
         <Route path="/notfound" element={<NotFoundPage/>}/>
       </Routes>
     </Router>

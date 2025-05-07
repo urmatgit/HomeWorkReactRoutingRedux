@@ -40,3 +40,34 @@
 .read-the-docs {
   color: #888;
 }
+  /* Fixed navbar */
+.navbar {
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  
+  z-index: 1000; /* Ensure navbar stays above content */
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  justify-content: left;
+}
+
+.navbar-links li {
+  margin: 0 20px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar-links a:hover {
+  color: #ff6347;
+}
