@@ -19,11 +19,15 @@ const App: React.FC=()=>{
           <li>
             <Link to="/auth">Login page</Link>
           </li>
+          <li>
+            <Link to="/auth/logout">Logout</Link>
+          </li>
         </ul>
       </nav>
       <Routes>
         <Route index path="/" element={<HomePage/>}/>
-        <Route path="/auth" element={<AuthPage/>}/>
+        <Route path="/auth/:par1?" element={<AuthPage/>}/>
+        
         <Route path="/notfound" element={<NotFoundPage/>}/>
       </Routes>
     </Router>
