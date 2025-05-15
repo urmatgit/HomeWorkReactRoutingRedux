@@ -28,7 +28,7 @@ const App: React.FC=()=>{
         <Route index path="/" element={<HomePage/>}/>
         <Route path="/auth/:par1?" element={<AuthPage/>}/>
         
-        <Route path="/notfound" element={<NotFoundPage/>}/>
+        <Route path="/*" element={<NotFoundPage/>}/>
       </Routes>
     </Router>
   );
